@@ -1,5 +1,13 @@
-
-(function(global) {
+(function(name, global, definition){
+	if (typeof module !== "undefined" && module.exports) { 
+		module.exports = definition();
+	} else if (typeof define === "function" && define.amd) {
+		define(definition);
+	} else { 
+		global[name] = definition();
+	}
+})("Element", this, function(){
+	"use strict";
 
 	var pool = {},
 		ids = {},
@@ -233,6 +241,6 @@
 		return randStr;
 	}
 
-	global.Element = Element;
+	return Element;
 
-})(this);
+});
