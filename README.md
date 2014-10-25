@@ -7,7 +7,7 @@ Element.js creates or wraps dom elements in a convenient API
 and uses an internal object pool and cached property values
 for memory managment and performance.  
 
-## Examples
+## Usage
 
 ### Create instances
 
